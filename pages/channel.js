@@ -3,7 +3,7 @@ import { Layout } from '../components/Layout';
 import { SeriesLits } from '../components/SeriesList';
 import { PodcastsList } from '../components/PodcastsList';
 import { Banner } from '../components/Banner';
-import Error from './_error';
+import Error from 'next/error';
 import PodcastPlayer from '../components/PodcastPlayer';
 
 const Channel = ({ channel, audioClips = [], series = [], statusCode }) => {

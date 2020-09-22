@@ -3,7 +3,7 @@ import { Layout } from '../components/Layout';
 import { ReturnModal } from '../components/ReturnModal';
 import { Player } from '../components/Player';
 import { PodcastImage } from '../components/PodcastImage';
-import Error from './_error';
+import Error from 'next/error';
 import PodcastPlayer from '../components/PodcastPlayer';
 
 export default function Podcast({ podcast = {}, statusCode }) {
