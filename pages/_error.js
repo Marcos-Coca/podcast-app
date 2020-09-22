@@ -2,7 +2,7 @@ import React from 'react';
 import { Layout } from '../components/Layout';
 import Link from 'next/link';
 
-const Error = ({ statusCode }) => {
+const Error = ({ statusCode = 404 }) => {
     return (
         <Layout title="Oh no 😕">
             <div className="message">
@@ -37,11 +37,5 @@ const Error = ({ statusCode }) => {
         </Layout>
     );
 };
-
-export async function getServerSideProps({ err, res }) {
-    const statusCode = res ? res.statusCode : err ? err.statusCode : null;
-
-    return { props: { statusCode } };
-}
 
 export default Error;

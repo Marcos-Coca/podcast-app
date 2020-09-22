@@ -1,5 +1,4 @@
 import { Link } from '../routes';
-import { slug } from '../helpers/slug';
 export const PodcastsList = ({ audioClips, handlePodcast }) => {
     return (
         <>
@@ -9,7 +8,7 @@ export const PodcastsList = ({ audioClips, handlePodcast }) => {
                     route="podcast"
                     params={{
                         slug: clip.title,
-                        slugChannel: slug(clip.channel.title),
+                        slugChannel: clip.channel.title,
                         id: clip.id,
                         idChannel: clip.channel.id,
                     }}>

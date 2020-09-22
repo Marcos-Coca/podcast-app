@@ -1,11 +1,11 @@
 import { Link } from '../routes';
-import { slug } from '../helpers/slug';
 
 export const ChannelGrid = ({ channels }) => (
     <>
         <div className="channels">
-            {channels.map((channel) => (
+            {channels.map((channel, index) => (
                 <Link
+                    key={index}
                     route="channel"
                     params={{
                         slug: channel.title,

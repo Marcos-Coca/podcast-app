@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from '../routes';
-import { slug } from '../helpers/slug';
 
 export default class PodcastPlayer extends React.Component {
     render() {
@@ -16,7 +15,7 @@ export default class PodcastPlayer extends React.Component {
                             <Link
                                 route="channel"
                                 params={{
-                                    slug: slug(clip.channel.title),
+                                    slug: clip.channel.title,
                                     id: clip.channel.id,
                                 }}
                                 prefetch>
